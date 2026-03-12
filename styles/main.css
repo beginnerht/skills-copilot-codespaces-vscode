@@ -1,0 +1,235 @@
+/* ===================================================
+   Controller Settings App – Stylesheet
+   =================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #0d1117;
+  color: #c9d1d9;
+  min-height: 100vh;
+}
+
+/* Header */
+.app-header {
+  background: #161b22;
+  border-bottom: 1px solid #30363d;
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  color: #58a6ff;
+}
+
+.subtitle {
+  margin-top: 0.25rem;
+  color: #8b949e;
+  font-size: 0.9rem;
+}
+
+/* Main layout */
+.app-main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Cards */
+.card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  color: #58a6ff;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #30363d;
+  padding-bottom: 0.5rem;
+}
+
+/* Setting rows (label + slider + value) */
+.setting-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.setting-row label {
+  min-width: 160px;
+  font-size: 0.9rem;
+  color: #c9d1d9;
+}
+
+.setting-row input[type="range"] {
+  flex: 1;
+  accent-color: #58a6ff;
+  cursor: pointer;
+}
+
+.setting-row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #58a6ff;
+  cursor: pointer;
+}
+
+.value-display {
+  min-width: 32px;
+  text-align: right;
+  font-size: 0.85rem;
+  color: #58a6ff;
+  font-weight: 600;
+}
+
+/* Hint boxes (for TODO sections) */
+.hint {
+  background: #1c2128;
+  border-left: 3px solid #f0883e;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  color: #8b949e;
+  margin-bottom: 0.75rem;
+}
+
+.hint strong {
+  color: #f0883e;
+}
+
+/* Placeholder text */
+.placeholder {
+  color: #484f58;
+  font-style: italic;
+  font-size: 0.875rem;
+}
+
+/* Controller list */
+.controller-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: #1c2128;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.controller-item .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #3fb950;
+  flex-shrink: 0;
+}
+
+/* Button map grid */
+.button-map-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.button-map-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1c2128;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+.button-map-item select {
+  background: #0d1117;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.8rem;
+}
+
+/* Profile controls */
+.profile-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.profile-row input[type="text"],
+.profile-row select {
+  flex: 1;
+  min-width: 150px;
+  padding: 0.4rem 0.6rem;
+  background: #0d1117;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  font-size: 0.875rem;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-primary {
+  background: #238636;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #21262d;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+}
+
+.btn-danger {
+  background: #b62324;
+  color: #fff;
+}
+
+/* Actions section */
+.actions-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Status message */
+.status-message {
+  font-size: 0.85rem;
+  margin-left: auto;
+  color: #3fb950;
+  min-height: 1.2em;
+}
+
+.status-message.error {
+  color: #f85149;
+}
