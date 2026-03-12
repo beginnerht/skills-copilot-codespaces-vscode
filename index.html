@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controller Settings</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>🎮 Controller Settings</h1>
+      <p class="subtitle">Configure your controller preferences</p>
+    </header>
+
+    <main class="app-main">
+      <!-- Controller Status Section (Complete – use as reference) -->
+      <section class="card" id="controller-status-section">
+        <h2>Connected Controllers</h2>
+        <div id="controller-list">
+          <p class="placeholder">No controllers detected. Connect a controller and press any button.</p>
+        </div>
+        <button class="btn btn-secondary" id="refresh-controllers">Refresh</button>
+      </section>
+
+      <!-- Sensitivity Settings Section (Complete – use as reference) -->
+      <section class="card" id="sensitivity-section">
+        <h2>Sensitivity</h2>
+        <div class="setting-row">
+          <label for="look-sensitivity">Look Sensitivity</label>
+          <input type="range" id="look-sensitivity" min="1" max="10" value="5" />
+          <span class="value-display" id="look-sensitivity-value">5</span>
+        </div>
+        <div class="setting-row">
+          <label for="aim-sensitivity">Aim Sensitivity</label>
+          <input type="range" id="aim-sensitivity" min="1" max="10" value="3" />
+          <span class="value-display" id="aim-sensitivity-value">3</span>
+        </div>
+      </section>
+
+      <!-- Dead Zone Settings Section (TODO – implement this section) -->
+      <section class="card" id="deadzone-section">
+        <h2>Dead Zones</h2>
+        <p class="hint">
+          💡 <strong>Practice:</strong> Add sliders for Left Stick Dead Zone and
+          Right Stick Dead Zone (range 0–30, default 10), similar to the
+          Sensitivity section above.
+        </p>
+        <div id="deadzone-controls">
+          <!-- TODO: Add dead zone sliders here -->
+        </div>
+      </section>
+
+      <!-- Vibration Settings Section (TODO – implement this section) -->
+      <section class="card" id="vibration-section">
+        <h2>Vibration</h2>
+        <p class="hint">
+          💡 <strong>Practice:</strong> Add a toggle to enable/disable vibration
+          and a slider to control vibration intensity (0–100%).
+        </p>
+        <div id="vibration-controls">
+          <!-- TODO: Add vibration toggle and intensity slider here -->
+        </div>
+      </section>
+
+      <!-- Button Mapping Section (Complete – use as reference) -->
+      <section class="card" id="button-mapping-section">
+        <h2>Button Mapping</h2>
+        <div id="button-map-list" class="button-map-grid">
+          <!-- Populated dynamically by app.js -->
+        </div>
+      </section>
+
+      <!-- Profile Management Section (TODO – implement this section) -->
+      <section class="card" id="profiles-section">
+        <h2>Profiles</h2>
+        <p class="hint">
+          💡 <strong>Practice:</strong> Add input + button to save the current
+          settings as a named profile, a dropdown to load a saved profile, and a
+          button to delete the selected profile.
+        </p>
+        <div id="profile-controls">
+          <!-- TODO: Add profile save/load/delete controls here -->
+        </div>
+        <div id="profile-list"></div>
+      </section>
+
+      <!-- Settings Actions (Complete) -->
+      <section class="card actions-section">
+        <button class="btn btn-primary" id="save-settings">Save Settings</button>
+        <button class="btn btn-danger" id="reset-settings">Reset to Defaults</button>
+        <p id="status-message" class="status-message"></p>
+      </section>
+    </main>
+
+    <script src="src/controllers.js"></script>
+    <script src="src/settings.js"></script>
+    <script src="src/app.js"></script>
+  </body>
+</html>
